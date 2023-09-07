@@ -1,0 +1,42 @@
+"private":true,//这个去掉，因为发布的是给别人使用的组件
+"description": "李秀娟演示组件库",
+ "main": "dist/index.umd.js",//发布的组件库的入口文件
+  "keywords": [//方便别人搜索我的组件库
+    "lixj-ui",
+    "vue",
+    "ui"
+  ],
+  "author": "lixj",
+  "files": [//只将这些文件夹发布到npm服务器
+    "dist",
+    "components"
+  ],
+
+
+
+webpack和gulp的作用：
+webpack处理js和vue文件，gulp处理sass文件
+
+vscode中发布项目到npm：
+1.npm login
+2.npm publish
+
+
+
+vuepress(vue如果是2需要安装下面这些版本)
+vuepress指定vue版本的起因，我须要用vuepress来编写UI组件库文档，但我的vue版本是锁定在2.6.14,所以导致默认装置vueprees时候，vue-server-renderer与vue-server-renderer这2个包与vue不对立报错（vuepress@1.x默认装置最新版本应该是2.7）。所以须要指定装置这2个包的版本。
+{
+  "devDependencies": {
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
+}
+
+在github上编写文档说明：
+1.初始化组件库文档结构；2.编写卡片组件文档；3.在github上创建个人站点；4.将文档部署到github.io
+本地项目与github的git绑定：
+1.git init

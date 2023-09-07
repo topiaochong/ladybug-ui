@@ -1,24 +1,23 @@
-# guquan-ui
+# ladybug-ui 组件库
 
-## Project setup
-```
-npm install
-```
+### 快速开始
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+#### 1.安装组件库
+
+```bash
+npm i ladybug-ui
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 2.引用组件库
 
-### Lints and fixes files
-```
-npm run lint
-```
+```javascript
+//全部引入
+import "ladybug-ui/dist/css/index.css";
+import LadyBugUI from "ladybug-ui";
+Vue.use(LadyBugUI);
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+//按需引入
+import "ladybug-ui/dist/css/demo.css";
+import { Demo } from "ladybug-ui";
+Vue.use(Demo);
+```
